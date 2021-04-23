@@ -5,9 +5,8 @@ public class ProductResponseDto {
     private Long id;
     private String description;
 
-    public ProductResponseDto(Long id, String description) {
-        this.id = id;
-        this.description = description;
+    @Deprecated
+    public ProductResponseDto() {
     }
 
     public Long getId() {
@@ -17,4 +16,5 @@ public class ProductResponseDto {
     public String getDescription() {
         return description;
     }
+
 }
