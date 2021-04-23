@@ -15,10 +15,13 @@ public class Product implements Serializable {
     private Long id;
 
     @Column(name = "DESCRICAO", length = 100, nullable = false)
-    private final String description;
+    private String description;
 
     @Column(name = "VALOR", nullable = false)
-    private final BigDecimal value;
+    private BigDecimal value;
+
+    public Product() {
+    }
 
     public Product(@NonNull String description, @NonNull BigDecimal value) {
         this.description = Objects.requireNonNull(description);
