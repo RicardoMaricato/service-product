@@ -1,4 +1,4 @@
-package com.ricardomaricato.productservice.http;
+package com.ricardomaricato.productservice.http.impl;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import com.github.fge.jsonpatch.JsonPatch;
 import com.github.fge.jsonpatch.JsonPatchException;
+import com.ricardomaricato.productservice.http.ProductController;
 import com.ricardomaricato.productservice.http.data.request.ProducPersistDto;
 import com.ricardomaricato.productservice.model.Product;
 import com.ricardomaricato.productservice.service.ProductService;
