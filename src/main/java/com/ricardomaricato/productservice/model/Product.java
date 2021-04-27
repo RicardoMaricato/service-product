@@ -23,6 +23,12 @@ public class Product implements Serializable {
     public Product() {
     }
 
+    public Product(@NonNull Long id, @NonNull String description, @NonNull BigDecimal value) {
+        this.id = Objects.requireNonNull(id);
+        this.description = Objects.requireNonNull(description);
+        this.value = Objects.requireNonNull(value);
+    }
+
     public Product(@NonNull String description, @NonNull BigDecimal value) {
         this.description = Objects.requireNonNull(description);
         this.value = Objects.requireNonNull(value);

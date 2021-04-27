@@ -1,5 +1,8 @@
 package com.ricardomaricato.productservice.http;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.github.fge.jsonpatch.JsonPatch;
+import com.github.fge.jsonpatch.JsonPatchException;
 import com.ricardomaricato.productservice.http.data.request.ProducPersistDto;
 import com.ricardomaricato.productservice.http.data.response.ProductResponseDto;
 import com.ricardomaricato.productservice.model.Product;
@@ -37,4 +40,11 @@ public interface ProductController {
     })
     @GetMapping(value = "/{id}")
     Product one(@PathVariable("id") Long id);
+
+    @PatchMapping(value = "/{id}")
+    Product update(@PathVariable("id") Long id, @RequestBody JsonPatch patch) throws JsonPatchException, JsonProcessingException;
+
+    @DeleteMapping(value = "/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    void delete(@PathVariable("id") Long id);
 }
