@@ -43,14 +43,14 @@ public class ExceptionControllerAdvice {
                 .stream()
                 .map(fieldError -> fieldError.getField() + " " + fieldError.getDefaultMessage())
                 .collect(Collectors.joining());
-        return new Error("X_200", message, urlDocumentation);
+        return new Error("X_300", message, urlDocumentation);
     }
 
     @ResponseBody
     @ExceptionHandler(Exception.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public Error other(Exception e) {
-        return new Error("X_300", e.getMessage(), urlDocumentation);
+        return new Error("X_500", e.getMessage(), urlDocumentation);
     }
 
 }
