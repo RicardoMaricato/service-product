@@ -7,7 +7,7 @@ services:
     restart: always
     environment:
       ARTEMIS_USERNAME: 'ricardomaricato'
-      ARTEMIS:PASSWORD: '1234'
+      ARTEMIS_PASSWORD: '1234'
     ports:
       - 61616:61616
       - 8161:8161
