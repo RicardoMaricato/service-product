@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping(value = "/product")
+@RequestMapping(value = "/")
 public class ProductControllerImpl implements ProductController {
 
     private final ProductService productService;
