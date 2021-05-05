@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import java.util.logging.Logger;
 
 @Component
-@Order(2)
+@Order(1)
 public class ProductPersistQueueListener implements ApplicationListener<ProductPersistEvent> {
 
     private static final Logger logger = Logger.getLogger(ProductPersistQueueListener.class.getName());
